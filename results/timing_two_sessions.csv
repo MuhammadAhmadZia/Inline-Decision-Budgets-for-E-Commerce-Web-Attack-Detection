@@ -1,0 +1,10 @@
+tier_code,tier,ops_per_request,sessionA_p50_us,sessionA_p99_us,sessionB_p50_us,sessionB_p90_us,sessionB_p99_us,sessionB_violates_250us_pct,sessionB_violates_1000us_pct,sessionA_meets_250us,sessionB_meets_250us
+T1_logreg,LR,31,207.6,396.9,157.745,215.2371,280.3242,3.7,0.0,False,False
+T2_tree_d4,DT,5,125.3,262.3,94.535,148.0301,186.5618,0.2,0.0,False,True
+T3_lgbm_50x8,GBDT-S,184,80.3,182.9,58.015,111.57,131.6809,0.0,0.0,True,True
+T4_lgbm_200x31,GBDT-M,1111,91.5,204.3,65.155,119.613,137.7218,0.0,0.0,True,True
+T4f_lgbm_200x31_full,GBDT-M+,1160,122.1,340.6,86.395,181.2921,217.4215,0.57,0.0,False,True
+T5_lgbm_800x127,GBDT-L,10939,245.8,448.4,122.49,193.608,232.5502,0.53,0.0,False,True
+T6_tfidf_lr,TFIDF-LR,694,576.8,1698.5,354.335,664.487,1019.0775,100.0,1.13,False,False
+X_featurize_cheap_only,"feature extraction, lexical set",,15.3,108.5,,,,,,,
+X_featurize_full_only,"feature extraction, extended set",,28.6,192.0,,,,,,,

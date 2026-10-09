@@ -1,0 +1,164 @@
+held-out endpoints (5): ['editar.jsp', 'anadir.jsp', 'autenticar.jsp', 'pagar.jsp', 'registro.jsp']
+
+[random | seed 42] train 36,639 val 12,213 test 12,213 | test attack share 0.410 | exact overlap 60.0% | endpoint overlap 98.2%
+   T1_logreg                AUC 0.8488  rec@0.1% 0.2645  rec@1% 0.3649
+   T2_tree_d4               AUC 0.8623  rec@0.1% 0.4179  rec@1% 0.4588
+   T3_lgbm_50x8             AUC 0.9680  rec@0.1% 0.5889  rec@1% 0.7125
+   T4_lgbm_200x31           AUC 0.9800  rec@0.1% 0.7391  rec@1% 0.8057
+   T5_lgbm_800x127          AUC 0.9834  rec@0.1% 0.7289  rec@1% 0.8502
+   T4f_lgbm_200x31_full     AUC 0.9812  rec@0.1% 0.7552  rec@1% 0.8255
+   T6_tfidf_lr              AUC 0.9194  rec@0.1% 0.7205  rec@1% 0.7626
+
+[random | seed 1] train 36,639 val 12,213 test 12,213 | test attack share 0.410 | exact overlap 59.0% | endpoint overlap 98.3%
+   T1_logreg                AUC 0.8504  rec@0.1% 0.2635  rec@1% 0.3567
+   T2_tree_d4               AUC 0.8619  rec@0.1% 0.4203  rec@1% 0.4766
+   T3_lgbm_50x8             AUC 0.9663  rec@0.1% 0.5972  rec@1% 0.7052
+   T4_lgbm_200x31           AUC 0.9790  rec@0.1% 0.7243  rec@1% 0.7913
+   T5_lgbm_800x127          AUC 0.9815  rec@0.1% 0.7387  rec@1% 0.8364
+   T4f_lgbm_200x31_full     AUC 0.9800  rec@0.1% 0.7656  rec@1% 0.8141
+   T6_tfidf_lr              AUC 0.9178  rec@0.1% 0.6980  rec@1% 0.7570
+
+[random | seed 2] train 36,639 val 12,213 test 12,213 | test attack share 0.410 | exact overlap 60.4% | endpoint overlap 98.4%
+   T1_logreg                AUC 0.8550  rec@0.1% 0.2679  rec@1% 0.3672
+   T2_tree_d4               AUC 0.8628  rec@0.1% 0.4357  rec@1% 0.4357
+   T3_lgbm_50x8             AUC 0.9653  rec@0.1% 0.6044  rec@1% 0.7167
+   T4_lgbm_200x31           AUC 0.9787  rec@0.1% 0.7512  rec@1% 0.8027
+   T5_lgbm_800x127          AUC 0.9828  rec@0.1% 0.7281  rec@1% 0.8416
+   T4f_lgbm_200x31_full     AUC 0.9801  rec@0.1% 0.7734  rec@1% 0.8195
+   T6_tfidf_lr              AUC 0.9121  rec@0.1% 0.6856  rec@1% 0.7409
+
+[exact_dedup | seed 42] train 15,364 val 5,122 test 5,122 | test attack share 0.623 | exact overlap 0.0% | endpoint overlap 93.3%
+   T1_logreg                AUC 0.8000  rec@0.1% 0.2618  rec@1% 0.4040
+   T2_tree_d4               AUC 0.7901  rec@0.1% 0.4018  rec@1% 0.4898
+   T3_lgbm_50x8             AUC 0.9122  rec@0.1% 0.4071  rec@1% 0.6176
+   T4_lgbm_200x31           AUC 0.9403  rec@0.1% 0.5938  rec@1% 0.6649
+   T5_lgbm_800x127          AUC 0.9654  rec@0.1% 0.5650  rec@1% 0.6759
+   T4f_lgbm_200x31_full     AUC 0.9520  rec@0.1% 0.5293  rec@1% 0.7097
+   T6_tfidf_lr              AUC 0.9860  rec@0.1% 0.2991  rec@1% 0.8985
+
+[exact_dedup | seed 1] train 15,364 val 5,122 test 5,122 | test attack share 0.623 | exact overlap 0.0% | endpoint overlap 93.8%
+   T1_logreg                AUC 0.8049  rec@0.1% 0.2850  rec@1% 0.3996
+   T2_tree_d4               AUC 0.7901  rec@0.1% 0.4190  rec@1% 0.4895
+   T3_lgbm_50x8             AUC 0.9172  rec@0.1% 0.3956  rec@1% 0.5878
+   T4_lgbm_200x31           AUC 0.9428  rec@0.1% 0.5650  rec@1% 0.6618
+   T5_lgbm_800x127          AUC 0.9662  rec@0.1% 0.4839  rec@1% 0.6780
+   T4f_lgbm_200x31_full     AUC 0.9522  rec@0.1% 0.6073  rec@1% 0.6871
+   T6_tfidf_lr              AUC 0.9897  rec@0.1% 0.3101  rec@1% 0.9251
+
+[exact_dedup | seed 2] train 15,364 val 5,122 test 5,122 | test attack share 0.623 | exact overlap 0.0% | endpoint overlap 93.5%
+   T1_logreg                AUC 0.8051  rec@0.1% 0.2919  rec@1% 0.4053
+   T2_tree_d4               AUC 0.7836  rec@0.1% 0.4100  rec@1% 0.4858
+   T3_lgbm_50x8             AUC 0.9128  rec@0.1% 0.4738  rec@1% 0.6248
+   T4_lgbm_200x31           AUC 0.9439  rec@0.1% 0.5390  rec@1% 0.6787
+   T5_lgbm_800x127          AUC 0.9684  rec@0.1% 0.5694  rec@1% 0.7028
+   T4f_lgbm_200x31_full     AUC 0.9505  rec@0.1% 0.6486  rec@1% 0.7122
+   T6_tfidf_lr              AUC 0.9886  rec@0.1% 0.2744  rec@1% 0.9295
+
+[endpoint_heldout | endpoint editar.jsp] train 15,625 val 5,209 test 4,774 | test attack share 0.581 | exact overlap 0.0% | endpoint overlap 0.0%
+   T1_logreg                AUC 0.7067  rec@0.1% 0.1669  rec@1% 0.2686
+   T2_tree_d4               AUC 0.5742  rec@0.1% 0.1424  rec@1% 0.9802
+   T3_lgbm_50x8             AUC 0.6748  rec@0.1% 0.2304  rec@1% 0.2776
+   T4_lgbm_200x31           AUC 0.6850  rec@0.1% 0.2491  rec@1% 0.3457
+   T5_lgbm_800x127          AUC 0.6806  rec@0.1% 0.2942  rec@1% 0.4124
+   T4f_lgbm_200x31_full     AUC 0.7133  rec@0.1% 0.3161  rec@1% 0.3937
+   T6_tfidf_lr              AUC 0.8281  rec@0.1% 0.3050  rec@1% 0.5245
+
+[endpoint_heldout | endpoint anadir.jsp] train 15,866 val 5,289 test 4,453 | test attack share 0.624 | exact overlap 0.0% | endpoint overlap 0.0%
+   T1_logreg                AUC 0.7689  rec@0.1% 0.2953  rec@1% 0.5542
+   T2_tree_d4               AUC 0.4253  rec@0.1% 0.1548  rec@1% 0.7886
+   T3_lgbm_50x8             AUC 0.6926  rec@0.1% 0.4267  rec@1% 1.0000
+   T4_lgbm_200x31           AUC 0.7637  rec@0.1% 0.8761  rec@1% 0.9978
+   T5_lgbm_800x127          AUC 0.7486  rec@0.1% 0.9517  rec@1% 0.9996
+   T4f_lgbm_200x31_full     AUC 0.7585  rec@0.1% 0.5384  rec@1% 1.0000
+   T6_tfidf_lr              AUC 0.9017  rec@0.1% 0.5380  rec@1% 0.9978
+
+[endpoint_heldout | endpoint autenticar.jsp] train 15,618 val 5,207 test 4,783 | test attack share 0.582 | exact overlap 0.0% | endpoint overlap 0.0%
+   T1_logreg                AUC 0.8077  rec@0.1% 0.2382  rec@1% 0.2885
+   T2_tree_d4               AUC 0.6144  rec@0.1% 0.2724  rec@1% 0.2982
+   T3_lgbm_50x8             AUC 0.7235  rec@0.1% 0.2749  rec@1% 0.9245
+   T4_lgbm_200x31           AUC 0.7337  rec@0.1% 0.9544  rec@1% 0.9978
+   T5_lgbm_800x127          AUC 0.7439  rec@0.1% 0.7805  rec@1% 0.9695
+   T4f_lgbm_200x31_full     AUC 0.7459  rec@0.1% 0.8423  rec@1% 0.9950
+   T6_tfidf_lr              AUC 0.8888  rec@0.1% 0.5778  rec@1% 0.9982
+
+[endpoint_heldout | endpoint pagar.jsp] train 15,756 val 5,252 test 4,600 | test attack share 0.578 | exact overlap 0.0% | endpoint overlap 0.0%
+   T1_logreg                AUC 0.8758  rec@0.1% 0.1921  rec@1% 0.2481
+   T2_tree_d4               AUC 0.8346  rec@0.1% 0.2767  rec@1% 0.2774
+   T3_lgbm_50x8             AUC 0.5261  rec@0.1% 0.2692  rec@1% 0.2887
+   T4_lgbm_200x31           AUC 0.7167  rec@0.1% 0.2662  rec@1% 0.2932
+   T5_lgbm_800x127          AUC 0.7363  rec@0.1% 0.2331  rec@1% 0.3038
+   T4f_lgbm_200x31_full     AUC 0.7689  rec@0.1% 0.2789  rec@1% 0.3038
+   T6_tfidf_lr              AUC 0.9424  rec@0.1% 0.9421  rec@1% 0.9977
+
+[endpoint_heldout | endpoint registro.jsp] train 15,620 val 5,207 test 4,781 | test attack share 0.582 | exact overlap 0.0% | endpoint overlap 0.0%
+   T1_logreg                AUC 0.6843  rec@0.1% 0.2064  rec@1% 0.3017
+   T2_tree_d4               AUC 0.6103  rec@0.1% 0.1395  rec@1% 0.2352
+   T3_lgbm_50x8             AUC 0.6811  rec@0.1% 0.2204  rec@1% 0.2672
+   T4_lgbm_200x31           AUC 0.6763  rec@0.1% 0.2470  rec@1% 0.3139
+   T5_lgbm_800x127          AUC 0.6750  rec@0.1% 0.2211  rec@1% 0.3438
+   T4f_lgbm_200x31_full     AUC 0.7094  rec@0.1% 0.3200  rec@1% 0.4045
+   T6_tfidf_lr              AUC 0.8413  rec@0.1% 0.2949  rec@1% 0.6778
+
+======================================================================================
+LEAKAGE SENSITIVITY: recall at 0.1% FPR, mean (sd) over 3 seeds, or 5 held-out endpoints
+======================================================================================
+                               random      exact_dedup endpoint_heldout inflation_random_vs_dedup
+tier                                                                                             
+T1_logreg             0.2653 (0.0023)  0.2796 (0.0158)  0.2198 (0.0495)                     -5.4%
+T2_tree_d4            0.4246 (0.0097)  0.4103 (0.0086)  0.1972 (0.0709)                     +3.4%
+T3_lgbm_50x8          0.5968 (0.0078)  0.4255 (0.0422)  0.2843 (0.0830)                    +28.7%
+T4_lgbm_200x31        0.7382 (0.0135)  0.5659 (0.0274)  0.5186 (0.3633)                    +23.3%
+T4f_lgbm_200x31_full  0.7647 (0.0091)  0.5951 (0.0606)  0.4591 (0.2374)                    +22.2%
+T5_lgbm_800x127       0.7319 (0.0059)  0.5394 (0.0481)  0.4961 (0.3442)                    +26.3%
+T6_tfidf_lr           0.7014 (0.0177)  0.2945 (0.0183)  0.5316 (0.2637)                    +58.0%
+
+mean relative inflation, random vs exact_dedup: 22.4%
+
+======================================================================================
+LEAKAGE SENSITIVITY: recall at 1.0% FPR, mean (sd) over 3 seeds, or 5 held-out endpoints
+======================================================================================
+                               random      exact_dedup endpoint_heldout inflation_random_vs_dedup
+tier                                                                                             
+T1_logreg             0.3629 (0.0055)  0.4030 (0.0030)  0.3322 (0.1257)                    -11.0%
+T2_tree_d4            0.4570 (0.0205)  0.4884 (0.0022)  0.5159 (0.3439)                     -6.9%
+T3_lgbm_50x8          0.7115 (0.0058)  0.6101 (0.0196)  0.5516 (0.3759)                    +14.3%
+T4_lgbm_200x31        0.7999 (0.0076)  0.6685 (0.0090)  0.5897 (0.3730)                    +16.4%
+T4f_lgbm_200x31_full  0.8197 (0.0057)  0.7030 (0.0138)  0.6194 (0.3474)                    +14.2%
+T5_lgbm_800x127       0.8427 (0.0070)  0.6856 (0.0150)  0.6058 (0.3481)                    +18.6%
+T6_tfidf_lr           0.7535 (0.0113)  0.9177 (0.0168)  0.8392 (0.2240)                    -21.8%
+
+mean relative inflation, random vs exact_dedup: 3.4%
+
+mean train/test overlap by protocol:
+                  exact_overlap  endpoint_overlap
+protocol                                         
+endpoint_heldout            0.0               0.0
+exact_dedup                 0.0              93.5
+random                     59.8              98.3
+
+======================================================================================
+DEPLOYMENT TABLE (exact_dedup, mean over seeds; latency = fastest of 5 sweeps)
+======================================================================================
+                      recall_strict  recall_strict_sd  recall_loose  recall_loose_sd     auc  node_visits   p50_us    p90_us     p99_us  violates_250us_pct  violates_1000us_pct  feasible_250us  feasible_1000us
+tier                                                                                                                                                                                                             
+T4f_lgbm_200x31_full         0.5951            0.0606        0.7030           0.0138  0.9516    1159.7333   86.395  181.2921   217.4215                0.57                 0.00            True             True
+T4_lgbm_200x31               0.5659            0.0274        0.6685           0.0090  0.9423    1110.9000   65.155  119.6130   137.7218                0.00                 0.00            True             True
+T5_lgbm_800x127              0.5394            0.0481        0.6856           0.0150  0.9667   10938.9667  122.490  193.6080   232.5502                0.53                 0.00            True             True
+T3_lgbm_50x8                 0.4255            0.0422        0.6101           0.0196  0.9141     183.5000   58.015  111.5700   131.6809                0.00                 0.00            True             True
+T2_tree_d4                   0.4103            0.0086        0.4884           0.0022  0.7879       5.0000   94.535  148.0301   186.5618                0.20                 0.00            True             True
+T6_tfidf_lr                  0.2945            0.0183        0.9177           0.0168  0.9881       0.0000  354.335  664.4870  1019.0775              100.00                 1.13           False            False
+T1_logreg                    0.2796            0.0158        0.4030           0.0030  0.8033       0.0000  157.745  215.2371   280.3242                3.70                 0.00           False             True
+
+======================================================================================
+FEASIBLE FRONTIER
+======================================================================================
+  0.1% FPR + 250us p99: feasible = T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127, T3_lgbm_50x8, T2_tree_d4
+      best mean recall 0.5951; within one sd of best (treat as tied): T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127
+  1% FPR + 250us p99: feasible = T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127, T3_lgbm_50x8, T2_tree_d4
+      best mean recall 0.7030; within one sd of best (treat as tied): T4f_lgbm_200x31_full
+  0.1% FPR + 1000us p99: feasible = T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127, T3_lgbm_50x8, T2_tree_d4, T1_logreg
+      best mean recall 0.5951; within one sd of best (treat as tied): T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127
+  1% FPR + 1000us p99: feasible = T4f_lgbm_200x31_full, T4_lgbm_200x31, T5_lgbm_800x127, T3_lgbm_50x8, T2_tree_d4, T1_logreg
+      best mean recall 0.7030; within one sd of best (treat as tied): T4f_lgbm_200x31_full
+
+saved protocol_sensitivity_raw.csv, protocol_sensitivity_summary.csv and deployment_table.csv to /content/drive/MyDrive/ICACS_inline/runs/full

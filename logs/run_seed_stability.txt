@@ -1,0 +1,75 @@
+deduplicated pool: 25,608 unique requests, attack share 0.623
+
+--- seed 42: train 15,364 | val 5,122 | test 5,122 | train/test request overlap 0.0% ---
+  T1_logreg                AUC 0.8000  recall@0.1%FPR 0.2618  recall@1%FPR 0.4040
+  T2_tree_d4               AUC 0.7901  recall@0.1%FPR 0.4018  recall@1%FPR 0.4898
+  T3_lgbm_50x8             AUC 0.9122  recall@0.1%FPR 0.4071  recall@1%FPR 0.6176
+  T4_lgbm_200x31           AUC 0.9403  recall@0.1%FPR 0.5938  recall@1%FPR 0.6649
+  T5_lgbm_800x127          AUC 0.9654  recall@0.1%FPR 0.5650  recall@1%FPR 0.6759
+  T4f_lgbm_200x31_full     AUC 0.9520  recall@0.1%FPR 0.5293  recall@1%FPR 0.7097
+  T6_tfidf_lr              AUC 0.9860  recall@0.1%FPR 0.2991  recall@1%FPR 0.8985
+
+--- seed 1: train 15,364 | val 5,122 | test 5,122 | train/test request overlap 0.0% ---
+  T1_logreg                AUC 0.8049  recall@0.1%FPR 0.2850  recall@1%FPR 0.3996
+  T2_tree_d4               AUC 0.7901  recall@0.1%FPR 0.4190  recall@1%FPR 0.4895
+  T3_lgbm_50x8             AUC 0.9172  recall@0.1%FPR 0.3956  recall@1%FPR 0.5878
+  T4_lgbm_200x31           AUC 0.9428  recall@0.1%FPR 0.5650  recall@1%FPR 0.6618
+  T5_lgbm_800x127          AUC 0.9662  recall@0.1%FPR 0.4839  recall@1%FPR 0.6780
+  T4f_lgbm_200x31_full     AUC 0.9522  recall@0.1%FPR 0.6073  recall@1%FPR 0.6871
+  T6_tfidf_lr              AUC 0.9897  recall@0.1%FPR 0.3101  recall@1%FPR 0.9251
+
+--- seed 2: train 15,364 | val 5,122 | test 5,122 | train/test request overlap 0.0% ---
+  T1_logreg                AUC 0.8051  recall@0.1%FPR 0.2919  recall@1%FPR 0.4053
+  T2_tree_d4               AUC 0.7836  recall@0.1%FPR 0.4100  recall@1%FPR 0.4858
+  T3_lgbm_50x8             AUC 0.9128  recall@0.1%FPR 0.4738  recall@1%FPR 0.6248
+  T4_lgbm_200x31           AUC 0.9439  recall@0.1%FPR 0.5390  recall@1%FPR 0.6787
+  T5_lgbm_800x127          AUC 0.9684  recall@0.1%FPR 0.5694  recall@1%FPR 0.7028
+  T4f_lgbm_200x31_full     AUC 0.9505  recall@0.1%FPR 0.6486  recall@1%FPR 0.7122
+  T6_tfidf_lr              AUC 0.9886  recall@0.1%FPR 0.2744  recall@1%FPR 0.9295
+
+==============================================================================
+RECALL AT 0.1% FPR ACROSS SEEDS (deduplicated)
+==============================================================================
+seed                       1       2      42    mean      sd   range
+tier                                                                
+T4f_lgbm_200x31_full  0.6073  0.6486  0.5293  0.5951  0.0606  0.1193
+T4_lgbm_200x31        0.5650  0.5390  0.5938  0.5659  0.0274  0.0548
+T5_lgbm_800x127       0.4839  0.5694  0.5650  0.5394  0.0481  0.0855
+T3_lgbm_50x8          0.3956  0.4738  0.4071  0.4255  0.0422  0.0782
+T2_tree_d4            0.4190  0.4100  0.4018  0.4103  0.0086  0.0172
+T6_tfidf_lr           0.3101  0.2744  0.2991  0.2945  0.0183  0.0357
+T1_logreg             0.2850  0.2919  0.2618  0.2796  0.0158  0.0301
+
+==============================================================================
+RECALL AT 1.0% FPR ACROSS SEEDS (deduplicated)
+==============================================================================
+seed                       1       2      42    mean      sd   range
+tier                                                                
+T6_tfidf_lr           0.9251  0.9295  0.8985  0.9177  0.0168  0.0310
+T4f_lgbm_200x31_full  0.6871  0.7122  0.7097  0.7030  0.0138  0.0251
+T5_lgbm_800x127       0.6780  0.7028  0.6759  0.6856  0.0150  0.0269
+T4_lgbm_200x31        0.6618  0.6787  0.6649  0.6685  0.0090  0.0169
+T3_lgbm_50x8          0.5878  0.6248  0.6176  0.6101  0.0196  0.0370
+T2_tree_d4            0.4895  0.4858  0.4898  0.4884  0.0022  0.0040
+T1_logreg             0.3996  0.4053  0.4040  0.4030  0.0030  0.0057
+
+==============================================================================
+CLAIM STABILITY: paired bootstrap within each seed
+==============================================================================
+
+At 0.1% FPR:
+  mid-size beats largest               diffs ['+0.0288', '+0.0811', '-0.0304']  -> UNSTABLE across seeds (++-) - do not claim a ranking
+  cheap features beat rich features    diffs ['+0.0645', '-0.0423', '-0.1096']  -> UNSTABLE across seeds (+--) - do not claim a ranking
+  GBDT beats TF-IDF                    diffs ['+0.2947', '+0.2549', '+0.2646']  -> HOLDS in 3/3 seeds
+  mid-size beats smallest              diffs ['+0.1867', '+0.1694', '+0.0651']  -> HOLDS in 3/3 seeds
+
+At 1.0% FPR:
+  mid-size beats largest               diffs ['-0.0110', '-0.0163', '-0.0241']  -> REVERSED in 3/3 seeds (b wins consistently)
+  cheap features beat rich features    diffs ['-0.0448', '-0.0254', '-0.0335']  -> REVERSED in 3/3 seeds (b wins consistently)
+  GBDT beats TF-IDF                    diffs ['-0.2336', '-0.2634', '-0.2509']  -> REVERSED in 3/3 seeds (b wins consistently)
+  mid-size beats smallest              diffs ['+0.0473', '+0.0739', '+0.0539']  -> HOLDS in 3/3 seeds
+
+saved seed_stability.csv and seed_claim_stability.csv to /content/drive/MyDrive/ICACS_inline/runs/full
+
+Read the verdicts: "HOLDS in 3/3" can go in the paper as a finding.
+"UNSTABLE" means the two tiers must be reported as comparable, not ranked.

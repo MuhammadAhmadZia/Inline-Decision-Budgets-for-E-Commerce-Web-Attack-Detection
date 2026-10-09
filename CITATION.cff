@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: >-
+  Green Decision Budgets for Inline E-Commerce Web Attack Detection:
+  code, results and figures
+message: If you use this software or these results, please cite the paper.
+type: software
+authors:
+  - given-names: Muhammad
+    family-names: Arslan
+    affiliation: Department of Software Engineering, The University of Lahore
+    email: muhammad.arslan@se.uol.edu.pk
+  - given-names: Muhammad Ahmad
+    family-names: Zia
+    affiliation: Department of Computer Science and IT, The University of Lahore
+    email: muhammad.zia@cs.uol.edu.pk
+  - given-names: Habib
+    family-names: ur-Rehman
+    affiliation: Department of Software Engineering, The University of Lahore
+    email: habib.rahman@se.uol.edu.pk
+  - given-names: Rabee
+    family-names: Imran
+    affiliation: Department of Software Engineering, The University of Lahore
+    email: rabee.imran@se.uol.edu.pk
+  - given-names: Syeda Mariam
+    family-names: Muzammal
+    affiliation: >-
+      School of Computer Science, Faculty of Innovation and Technology,
+      Taylor's University, Subang Jaya, Malaysia
+    email: mariam.muzammal@taylors.edu.my
+license: MIT
+abstract: >-
+  Evaluation code and results for a study of machine-learning web attack detectors for
+  e-commerce under inline constraints: matched false-positive rates of 1 percent and 0.1
+  percent, three split protocols controlling duplicate leakage, repeated splits, and
+  serving cost measured as both a hardware-independent work proxy and single-request
+  latency on the CSIC 2010 dataset.
+keywords:
+  - web attack detection
+  - e-commerce security
+  - operating point
+  - data leakage
+  - gradient boosted trees
+  - inference cost
+  - green machine learning

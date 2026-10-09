@@ -1,0 +1,8 @@
+tier_code,tier,auc,recall_fpr0.01_mean,recall_fpr0.01_sd,recall_fpr0.001_mean,recall_fpr0.001_sd,ops_per_request
+T1_logreg,LR,0.803,0.403,0.003,0.28,0.016,31
+T2_tree_d4,DT,0.788,0.488,0.002,0.41,0.009,5
+T3_lgbm_50x8,GBDT-S,0.914,0.61,0.02,0.426,0.042,184
+T4_lgbm_200x31,GBDT-M,0.942,0.668,0.009,0.566,0.027,1111
+T4f_lgbm_200x31_full,GBDT-M+,0.952,0.703,0.014,0.595,0.061,1160
+T5_lgbm_800x127,GBDT-L,0.967,0.686,0.015,0.539,0.048,10939
+T6_tfidf_lr,TFIDF-LR,0.988,0.918,0.017,0.295,0.018,694

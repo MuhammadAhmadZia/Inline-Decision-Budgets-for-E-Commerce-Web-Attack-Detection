@@ -1,0 +1,7 @@
+# Versions used for the reported runs (free Google Colab CPU runtime, Python 3).
+# The notebook installs the first two itself; the rest ship with Colab.
+lightgbm==4.5.0
+scikit-learn==1.5.2
+numpy==2.1.3
+pandas
+matplotlib
